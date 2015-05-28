@@ -1,0 +1,20 @@
+{
+  "name": "middleman-article-creator",
+  "main": "./lib/middleman-article-creator",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": ["middleman-article-creator:toggle", "middleman-article-creator:create_article"]
+  },
+  "repository": "https://github.com/atom/middleman-article-creator",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "touch": "0.0.3",
+    "date-utils": "1.2.17"
+  }
+}
