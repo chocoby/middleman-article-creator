@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": ["middleman-article-creator:toggle", "middleman-article-creator:create_article"]
+    "atom-workspace": ["middleman-article-creator:New Article"]
   },
   "repository": "https://github.com/atom/middleman-article-creator",
   "license": "MIT",

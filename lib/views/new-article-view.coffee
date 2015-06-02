@@ -3,7 +3,7 @@
 
 path = require 'path'
 touch = require 'touch'
-require('date-utils');
+require 'date-utils'
 
 module.exports =
   class NewArticleView extends View
@@ -36,6 +36,7 @@ module.exports =
       atom.workspace.getActivePane().activate()
 
     articlesDir: ->
+      # TODO: source/blog/
       homeDir = process.env.HOME or process.env.HOMEPATH or process.env.USERPROFILE
       atom.project.getPaths()[0] or homeDir
 

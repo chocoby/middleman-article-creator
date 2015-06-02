@@ -1,20 +1,13 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
-'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle middleman-article-creator'
-      'command': 'middleman-article-creator:toggle'
-    }
-  ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'middleman-article-creator'
+      'label': 'Middleman'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'middleman-article-creator:toggle'
+          'label': 'New Article'
+          'command': 'middleman-article-creator:New Article'
         }
       ]
     ]
