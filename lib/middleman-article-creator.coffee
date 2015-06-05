@@ -2,7 +2,14 @@
 
 NewArticleView = require './views/new-article-view'
 
+path = require 'path'
+
 module.exports = MiddlemanArticleCreator =
+  config:
+    articleDirectory:
+      type: 'string'
+      default: path.join 'source', 'blog'
+
   subscriptions: null
 
   newArticleView: null
