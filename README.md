@@ -1,6 +1,8 @@
-# Middleman Article Creator
+# [Middleman Article Creator](https://github.com/chocoby/middleman-article-creator)
 
-An Atom package for create middleman article.
+https://atom.io/packages/middleman-article-creator
+
+An Atom package to quickly create a middleman article.
 
 ## Example
 
@@ -9,3 +11,11 @@ An Atom package for create middleman article.
 ## Settings
 
 * Article Directory
+
+## Development
+
+```
+git clone https://github.com/chocoby/middleman-article-creator.git
+cd middleman-article-creator
+npm install # or yarn install
+```
