@@ -9,6 +9,7 @@ module.exports = MiddlemanArticleCreator =
     articleDirectory:
       type: 'string'
       default: path.join 'source', 'blog'
+      description: 'You can also specify an absolute path'
 
   subscriptions: null
 

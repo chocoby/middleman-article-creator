@@ -37,7 +37,11 @@ module.exports =
 
     articlesDir: ->
       articleDirectory = atom.config.get('middleman-article-creator.articleDirectory')
-      path.join(atom.project.getPaths()[0], articleDirectory)
+
+      if articleDirectory.startsWith('/')
+        path.join(articleDirectory)
+      else
+        path.join(atom.project.getPaths()[0], articleDirectory)
 
     parameterizeString: (str) ->
       str.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-")
