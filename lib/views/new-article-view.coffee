@@ -39,18 +39,21 @@ module.exports =
       articleDirectory = atom.config.get('middleman-article-creator.articleDirectory')
       path.join(atom.project.getPaths()[0], articleDirectory)
 
+    parameterizeString: (str) ->
+      str.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-")
+
     createArticle: (name) ->
       dt = new Date();
       formattedDate = dt.toFormat('YYYY-MM-DD');
 
-      pathToCreate = path.join(@articlesDir(), "#{formattedDate}-#{name}.md")
+      pathToCreate = path.join(@articlesDir(), "#{formattedDate}-#{@parameterizeString(name)}.md")
 
       touch pathToCreate
 
       atom.workspace.open(pathToCreate).then ->
         contents = """
         ---
-        title:
+        title: #{name}
         date: #{formattedDate}
         tags:
         ---
