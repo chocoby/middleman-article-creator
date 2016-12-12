@@ -47,8 +47,8 @@ module.exports =
       str.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-")
 
     createArticle: (name) ->
-      dt = new Date();
-      formattedDate = dt.toFormat('YYYY-MM-DD');
+      dt = new Date()
+      formattedDate = dt.toFormat('YYYY-MM-DD')
 
       pathToCreate = path.join(@articlesDir(), "#{formattedDate}-#{@parameterizeString(name)}.md")
 
